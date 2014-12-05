@@ -213,10 +213,10 @@ public class Parser{
 		System.out.printf("%20s %10s%s", stack, i, LHS);
 		state = i;
 		state = Goto();
-		System.out.printf("%10s           push %s%s\n", state, LHS, state);
+		System.out.printf("%10s           push %s%s", state, LHS, state);
 		stack.push(LHS);
 		stack.push(state);
-		/*switch(LHS){
+		switch(LHS){
 			case 'F':
 				fStack.push(LHS);
 				fStack.push(idStack.pop());
@@ -259,7 +259,7 @@ public class Parser{
 				pTreeStack.push(eStack);
 				break;
 		}
-		System.out.printf("%10s \n",pTreeStack);*/
+		//System.out.printf("%10s \n",pTreeStack);
 	}
 
 	public void rules(){
